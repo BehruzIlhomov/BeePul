@@ -1,0 +1,35 @@
+#wrapHead {
+    #header {
+
+        #logoWelcome {
+
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+
+        #input_data {
+            
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+
+        #headTools {
+            
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+    }
+}
+
+#wrapAllData {
+    #sidebar {
+
+        @media (max-width: 1300px) {
+            display: none;
+        }
+    }
+}
+

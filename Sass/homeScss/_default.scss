@@ -1,0 +1,450 @@
+body {
+    transition: background-color 0.4s, color 0.4s;
+    overflow: hidden;
+}
+
+#input_data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    max-width: 453px;
+    padding: 0 12px;
+
+    #input_dataInner {
+        width: 100%;
+        height: 40px;
+        background-color: #FFFFFF;
+        border: 1px solid var(--color-input-border);
+        border-radius: 5px;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+        &::placeholder {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16.94px;
+            color: var(--color-primary-text);
+        }
+
+        &:focus {
+            border-color: var(--color-input-border);
+            outline: none;
+        }
+    }
+}
+
+#lang {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.94px;
+    color: var(--text-color-secondary);
+}
+
+#toggleMode {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    border-radius: 32px;
+    border: 1px solid var(--color--iconColor-two);
+    min-width: 53px;
+    height: 23px;
+    padding: 1.35px 0px 1.35px 3px;
+
+    #circleToggle-mode {
+        min-width: 19px;
+        height: 19px;
+        background-color: var(--color--iconColor-two);
+        border-radius: 20px;
+    }
+}
+
+#wrapHead {
+
+    #header {
+        height: 82px;
+        #mobileSidebar,
+        #bell {
+            display: none;
+        }
+    }
+}
+
+#wrapAllData {
+    display: flex;
+    width: 100%;
+
+    #sidebar {
+        max-width: 355px;
+        padding: 0 0px;
+        background-color: #FFFFFF;
+
+        #innerSidebar {
+            width: 100%;
+            padding: 40px 20px 0 20px;
+
+            #main_menu {
+
+                #main_PageSelector {
+                    display: flex;
+                    align-items: center;
+                    gap: 18px;
+                    background-color: var(--button-color-01);
+                    min-width: 311px;
+                    height: 56px;
+                    border-radius: 8px;
+                    padding: 16px;
+                }
+
+                #paymentsMenu_btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 18px;
+                    background-color: #ffffff;
+                    min-width: 311px;
+                    height: 56px;
+                    border-radius: 8px;
+                    padding: 16px;
+                }
+
+                #transactions {
+                    display: flex;
+                    align-items: center;
+                    gap: 18px;
+                    background-color: #ffffff;
+                    min-width: 311px;
+                    height: 56px;
+                    border-radius: 8px;
+                    padding: 16px;
+                }
+
+                #management {
+                    display: flex;
+                    align-items: center;
+                    gap: 18px;
+                    background-color: #ffffff;
+                    min-width: 311px;
+                    height: 56px;
+                    border-radius: 8px;
+                    padding: 16px;
+                }
+
+                #additionals_page {
+                    display: flex;
+                    align-items: center;
+                    gap: 18px;
+                    background-color: #ffffff;
+                    min-width: 311px;
+                    height: 56px;
+                    border-radius: 8px;
+                    padding: 16px;
+                }
+            }
+        }
+    }
+
+    #myInfo {
+        background: var(--color-card-bg-01);
+        width: 100%;
+        height: calc(100dvh - 82px);
+        padding: 56px 20px;
+        overflow-y: auto;
+
+        #innerInfo {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+
+            #noCardsRegistered {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 40px;
+                background-color: #FF4F4F33;
+                border-radius: 8px;
+                padding: 8px;
+                gap: 8px;
+
+                span {
+                    color: #FF4F4F;
+                }
+            }
+
+            #addCreditCard {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                align-items: center;
+                justify-content: center;
+                max-width: 224px;
+                height: 119px;
+                background-color: #fff;
+                border-radius: 8px;
+            }
+
+            #actions {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                width: 100%;
+                gap: 8px;
+
+                div {
+                    width: 100%;
+                    height: 99px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    padding: 12px;
+
+                    span {
+                        color: var(--color-primary-color);
+                    }
+                }
+            }
+
+            #noOperations {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 40px;
+                background: #4662C633;
+                border-radius: 8px;
+                padding: 8px;
+                gap: 8px;
+
+                span {
+                    color: #4662C6;
+                }
+            }
+
+            #widjets {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                #setUpWidjets {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 328px;
+                    height: 48px;
+                    border-radius: 8px;
+                    padding: 12px 20px;
+                    gap: 8px;
+                    background-color: #fff;
+
+                    span {
+                        color: var(--color-primary-color);
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 19.36px;
+                    }
+                }
+            }
+        }
+    }
+
+    #offers {
+        min-width: 340px;
+        padding: 0 30px;
+        position: relative;
+
+        #innerOffer {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            #profile {
+                background-color: var(--color-card-bg-01);
+                width: 100%;
+                height: auto;
+                padding: 32px 16px;
+                border-radius: 8px;
+            }
+
+            #fastTransfer {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 12px;
+
+                #inpTransfer {
+                    width: 100%;
+                    height: 52px;
+                    background: #fff;
+                    border-radius: 8px;
+                    border: 1px solid var(--color-input-border);
+                }
+            }
+        }
+    }
+}
+
+.toggle-container {
+    position: relative;
+    min-width: 45px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.toggle-circle {
+    position: absolute;
+    min-width: 20px;
+    height: 20px;
+    left: 2.25px;
+    top: 1.3px;
+    border-radius: 50%;
+    background: #000;
+    transition: left 0.4s, background-color 0.4s;
+}
+
+body.dark-mode {
+    background: var(--color-primary-color);
+    color: #fff;
+
+    #wrapHead {
+        background: var(--color-primary-color);
+        color: #fff;
+    }
+
+    #input_data {
+        #input_dataInner {
+            background-color: #595B5C;
+            border-color: #717273;
+            color: #fff;
+
+            &::placeholder {
+                color: #bbb;
+            }
+        }
+    }
+
+    #toggleMode {
+        border: none;
+        background-color: #00B207;
+
+        #circleToggle-mode {
+            left: 30px;
+            top: 2.2px;
+            background-color: #fff;
+        }
+    }
+
+    #wrapAllData {
+        #sidebar {
+            max-width: 355px;
+            background-color: var(--color-primary-color);
+
+            #innerSidebar {
+                width: 100%;
+                padding: 40px 20px 0 20px;
+
+                #main_menu {
+
+                    #main_PageSelector {
+                        display: flex;
+                        align-items: center;
+                        gap: 18px;
+                        background-color: var(--button-color-01);
+                        min-width: 311px;
+                        height: 56px;
+                        border-radius: 8px;
+                        padding: 16px;
+                    }
+
+                    #paymentsMenu_btn {
+                        display: flex;
+                        align-items: center;
+                        gap: 18px;
+                        min-width: 311px;
+                        height: 56px;
+                        border-radius: 8px;
+                        padding: 16px;
+                    }
+
+                    #transactions {
+                        display: flex;
+                        align-items: center;
+                        gap: 18px;
+                        min-width: 311px;
+                        height: 56px;
+                        border-radius: 8px;
+                        padding: 16px;
+                    }
+
+                    #management {
+                        display: flex;
+                        align-items: center;
+                        gap: 18px;
+                        min-width: 311px;
+                        height: 56px;
+                        border-radius: 8px;
+                        padding: 16px;
+                    }
+
+                    #additionals_page {
+                        display: flex;
+                        align-items: center;
+                        gap: 18px;
+                        min-width: 311px;
+                        height: 56px;
+                        border-radius: 8px;
+                        padding: 16px;
+                    }
+                }
+            }
+        }
+
+        #myInfo {
+            background: var(--color-primary-color);
+            width: 100%;
+            padding: 56px 20px;
+
+            #innerInfo {
+                #addCreditCard {
+                    background: var(--color-card-bg-02);
+                    border-image-source: linear-gradient(180deg, #5A5A5A 0%, #333333 100%);
+                }
+
+                #actions {
+                    div {
+                        background-color: var(--color-card-bg-02);
+
+                        span {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        #offers {
+            #innerOffer {
+                #profile {
+                    background-color: var(--color-card-bg-02);
+                }
+
+                #fastTransfer {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 12px;
+
+                    #inpTransfer {
+                        width: 100%;
+                        height: 52px;
+                        border-radius: 8px;
+                        background-color: var(--color-card-bg-02);
+                        border: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
