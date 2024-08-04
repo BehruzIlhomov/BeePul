@@ -1,0 +1,652 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+}
+body {
+  font-family: "Inter", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  transition: background-color 0.4s, color 0.4s;
+  overflow: hidden;
+}
+
+#input_data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  max-width: 453px;
+  padding: 0 12px;
+}
+#input_data #input_dataInner {
+  width: 100%;
+  height: 40px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-input-border);
+  border-radius: 5px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+#input_data #input_dataInner::-moz-placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  color: var(--color-primary-text);
+}
+#input_data #input_dataInner::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  color: var(--color-primary-text);
+}
+#input_data #input_dataInner:focus {
+  border-color: var(--color-input-border);
+  outline: none;
+}
+
+#lang {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.94px;
+  color: var(--text-color-secondary);
+}
+
+#toggleMode {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  border-radius: 32px;
+  border: 1px solid var(--color--iconColor-two);
+  min-width: 53px;
+  height: 23px;
+  padding: 1.35px 0px 1.35px 3px;
+}
+#toggleMode #circleToggle-mode {
+  min-width: 19px;
+  height: 19px;
+  background-color: var(--color--iconColor-two);
+  border-radius: 20px;
+}
+
+#wrapHead #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#wrapHead #header #mobileSidebar {
+  display: none;
+}
+
+#wrapAllData {
+  display: flex;
+  width: 100%;
+}
+#wrapAllData #sidebar {
+  max-width: 355px;
+  padding: 0 0px;
+  background-color: #FFFFFF;
+}
+#wrapAllData #sidebar #innerSidebar {
+  width: 100%;
+  padding: 40px 20px 0 20px;
+}
+#wrapAllData #sidebar #innerSidebar #main_menu #main_PageSelector {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background-color: var(--button-color-01);
+  min-width: 311px;
+  height: 56px;
+  border-radius: 8px;
+  padding: 16px;
+}
+#wrapAllData #sidebar #innerSidebar #main_menu #paymentsMenu_btn {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background-color: #ffffff;
+  min-width: 311px;
+  height: 56px;
+  border-radius: 8px;
+  padding: 16px;
+}
+#wrapAllData #sidebar #innerSidebar #main_menu #transactions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background-color: #ffffff;
+  min-width: 311px;
+  height: 56px;
+  border-radius: 8px;
+  padding: 16px;
+}
+#wrapAllData #sidebar #innerSidebar #main_menu #management {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background-color: #ffffff;
+  min-width: 311px;
+  height: 56px;
+  border-radius: 8px;
+  padding: 16px;
+}
+#wrapAllData #sidebar #innerSidebar #main_menu #additionals_page {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background-color: #ffffff;
+  min-width: 311px;
+  height: 56px;
+  border-radius: 8px;
+  padding: 16px;
+}
+#wrapAllData #myInfo {
+  background: var(--color-card-bg-01);
+  width: 100%;
+  height: calc(100dvh - 82px);
+  padding: 0px 20px;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+#wrapAllData #myInfo #innerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 32px 0;
+}
+#wrapAllData #myInfo #innerInfo #noCardsRegistered {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: rgba(255, 79, 79, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  gap: 8px;
+}
+#wrapAllData #myInfo #innerInfo #noCardsRegistered span {
+  color: #FF4F4F;
+}
+#wrapAllData #myInfo #innerInfo #addCreditCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  max-width: 224px;
+  height: 119px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+#wrapAllData #myInfo #innerInfo #actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  width: 100%;
+  gap: 8px;
+}
+#wrapAllData #myInfo #innerInfo #actions div {
+  width: 100%;
+  height: 99px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+}
+#wrapAllData #myInfo #innerInfo #actions div span {
+  color: var(--color-primary-color);
+}
+#wrapAllData #myInfo #innerInfo #noOperations {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background: rgba(70, 98, 198, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  gap: 8px;
+}
+#wrapAllData #myInfo #innerInfo #noOperations span {
+  color: #4662C6;
+}
+#wrapAllData #myInfo #innerInfo #widjets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrapAllData #myInfo #innerInfo #widjets #setUpWidjets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 328px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 12px 20px;
+  gap: 8px;
+  background-color: #fff;
+}
+#wrapAllData #myInfo #innerInfo #widjets #setUpWidjets span {
+  color: var(--color-primary-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.36px;
+}
+#wrapAllData #myInfo .payments_innerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  padding: 32px 0;
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 21.78px;
+  text-align: center;
+  color: var(--color-primary-color);
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_paymentVariations {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_paymentVariations .payments_myHouse {
+  width: 100%;
+  background-color: white;
+  height: 99px;
+  border-radius: 8px;
+  padding: 10px;
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_paymentVariations .payments_myHouse div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_payCell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: white;
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_payCell .payments_paySpan {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.36px;
+  color: var(--color-primary-color);
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_payCell .payments_cellNum {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_payCell .payments_cellNum .payments_inputNum {
+  width: 100%;
+  border: 1px solid var(--color-input-border);
+  width: 100%;
+  height: 52px;
+  background: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_payCell .payments_cellNum .payments_transferNum {
+  display: flex;
+  justify-content: right;
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_payCell .payments_cellNum .payments_transferNum button {
+  background-color: var(--button-color-01);
+  height: 31px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  min-width: 145px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.52px;
+  color: var(--color-primary-color);
+}
+#wrapAllData #myInfo .payments_innerInfo .btn_beeline_prod {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background-color: var(--button-color-01);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+#wrapAllData #myInfo .payments_innerInfo .btn_beeline_prod span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  color: var(--color-primary-color);
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_allCategories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_allCategories .payments_internet {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 8px 12px;
+  gap: 8px;
+}
+#wrapAllData #myInfo .payments_innerInfo .payments_allCategories .payments_internet span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+}
+#wrapAllData #myInfo .transfers_innerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  padding: 32px 0;
+}
+#wrapAllData #myInfo .transfers_innerInfo span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 21.78px;
+  text-align: center;
+  color: var(--color-primary-color);
+}
+#wrapAllData #myInfo .transfers_innerInfo .transfers_fillIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+#wrapAllData #myInfo .transfers_innerInfo .transfers_fillIn .transfers_wrapSvg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  background: white;
+  border-radius: 8px;
+  min-width: 96px;
+  height: 96px;
+}
+#wrapAllData #myInfo .transfers_innerInfo .transfers_fillIn .transfers_wrapSvg .transfers_svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96px;
+  min-width: 96px;
+}
+#wrapAllData #myInfo .transfers_innerInfo .transfers_fillIn .transfers_wrapSpan span {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24.2px;
+  text-align: center;
+  color: var(--color-primary-color);
+}
+#wrapAllData #myInfo .transfers_innerInfo .transfers_inpFillIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+#wrapAllData #myInfo .monitoring_innerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+}
+#wrapAllData #myInfo .monitoring_innerInfo .monitoring_span {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.78px;
+  color: var(--color-primary-color);
+  margin-bottom: 15px;
+  align-self: center;
+}
+#wrapAllData #myInfo .monitoring_innerInfo .monitoring_div .monitoring_chooseCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+#wrapAllData #myInfo .monitoring_innerInfo .monitoring_div .monitoring_chooseCard span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  color: var(--color-primary-color);
+}
+#wrapAllData #myInfo .monitoring_innerInfo .monitoring_div .monitoring_chooseCard .noCardsRegistered {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: rgba(255, 79, 79, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  gap: 8px;
+  margin-top: 10px;
+}
+#wrapAllData #myInfo .monitoring_innerInfo .monitoring_div .monitoring_chooseCard .noCardsRegistered span {
+  color: #FF4F4F;
+}
+#wrapAllData #offers {
+  min-width: 340px;
+  padding: 0 30px;
+  position: relative;
+}
+#wrapAllData #offers #innerOffer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#wrapAllData #offers #innerOffer #profile {
+  background-color: var(--color-card-bg-01);
+  width: 100%;
+  height: auto;
+  padding: 32px 16px;
+  border-radius: 8px;
+}
+#wrapAllData #offers #innerOffer #wrapTransfer #fastTransfer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+#wrapAllData #offers #innerOffer #wrapTransfer #fastTransfer #inpTransfer {
+  width: 100%;
+  height: 52px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid var(--color-input-border);
+}
+
+.toggle-container {
+  position: relative;
+  min-width: 45px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.toggle-circle {
+  position: absolute;
+  min-width: 20px;
+  height: 20px;
+  left: 2.25px;
+  top: 1.3px;
+  border-radius: 50%;
+  background: #000;
+  transition: left 0.4s, background-color 0.4s;
+}
+
+.active-section {
+  display: flex !important;
+}
+
+.inactive-section {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: scroll;
+  }
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 1300px) {
+  #wrapHead #header #logoWelcome {
+    display: none;
+  }
+}
+@media (max-width: 1300px) {
+  #wrapHead #header #input_data {
+    display: none;
+  }
+}
+@media (max-width: 1300px) {
+  #wrapHead #header #headTools {
+    display: none;
+  }
+}
+@media (max-width: 1300px) {
+  #wrapHead #header #mobileSidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #wrapAllData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+@media (max-width: 1300px) {
+  #wrapAllData #sidebar {
+    display: none;
+  }
+}
+@media (max-width: 1300px) {
+  #wrapAllData #sidebar #innerSidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+#wrapAllData #sidebar #innerSidebar #main_menu {
+  position: relative;
+  top: 30px;
+}
+#wrapAllData #sidebar #innerSidebar .x_sidebar {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  right: 20px;
+}
+#wrapAllData #sidebar #innerSidebar .x_sidebar .line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+}
+#wrapAllData #sidebar #innerSidebar .x_sidebar .line1 {
+  transform: rotate(45deg);
+}
+#wrapAllData #sidebar #innerSidebar .x_sidebar .line2 {
+  transform: rotate(-45deg);
+}
+#wrapAllData #sidebar.active {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 1300px) {
+  #wrapAllData #myInfo {
+    padding: 56px 20px 0 20px;
+    background: var(--color-card-bg-01);
+    width: 100%;
+    border-radius: 8px;
+    height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  #wrapAllData #myInfo {
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow-y: initial;
+    padding: 56px 20px;
+    height: initial;
+  }
+}
+@media (max-width: 768px) {
+  #wrapAllData #myInfo #innerInfo #actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(2fr, 150px));
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  #wrapAllData #offers {
+    position: initial;
+  }
+}
+@media (max-width: 768px) {
+  #wrapAllData #offers #innerOffer {
+    display: flex;
+  }
+}
+
+:root {
+  --color-primary-color: #333333;
+  --color--iconColor-two: #A2A8B1;
+  --color-primary-text: #C4C4C4;
+  --text-color-secondary: #929292;
+  --color-input-border: #E7EAED;
+  --button-color-01: #FFD600;
+  --color-white: #fff;
+  --color-card-bg-01: #F2F4F6;
+  --color-card-bg-02: #4B4C4D;
+  --color-separate-line: #E0E4E8;
+}/*# sourceMappingURL=main.css.map */
